@@ -181,7 +181,7 @@ body::-webkit-scrollbar-thumb {
     }
     
     .first-screen {
-        min-height: 600px;
+        max-height: calc(100vh - 130px);
     }
 }
 
