@@ -1,18 +1,18 @@
-const nodemailer = require('nodemailer');
-require('dotenv').config()
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
-    status: string;
+    message: string,
+    status: string|number;
 };
 
-export default function handler(
+export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
     const body = JSON.parse(req.body);
-    console.log(body)
     const transporter = nodemailer.createTransport({
         port: Number(process.env.MAILING_PORT),
         host: process.env.MAILING_HOST,
@@ -33,11 +33,24 @@ export default function handler(
             <div>Mensaje: ${body.message}</div>
         `,
     };
-    transporter.sendMail(mailData, function (err: any, info: any) {
-        if (err) console.log(err);
-        else console.log(info);
-        // return res.status(500).json({ status: `Error ${JSON.stringify(err)}` });
+    console.log("About to send the mail...");
+    const result:Data = await new Promise((resolve, reject) => {
+        transporter.sendMail(mailData, function (err: any, info: any) {
+            if (err) {
+                console.error(err);
+                reject({
+                    status: 500,
+                    message: 'Email not sent'
+                })
+            } else {
+                console.log(info);
+                resolve({
+                    status: 500,
+                    message: 'Email not sent'
+                })
+            }
+        });
     });
 
-    return res.status(200).json({ status: "Email sent" });
+    return res.status(200).json(result);
 }

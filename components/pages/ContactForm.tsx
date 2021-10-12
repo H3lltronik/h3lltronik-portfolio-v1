@@ -16,10 +16,11 @@ export const ContactForm = () => {
         }, 500);
         setFormSent(true);
 
-        await fetch("/api/contact", {
+        const result = await fetch("/api/contact", {
             method: 'POST',
             body: JSON.stringify(data),
-        })
+        });
+        console.log("Contact info", result.body)
     };
 
     function doSubmit () {
