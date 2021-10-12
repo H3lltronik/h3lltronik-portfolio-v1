@@ -4,6 +4,7 @@ import React, { FC, useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import { useWindowSize } from "../../../common/hooks";
 import { computerIcon, githubIcon, leftChevronIcon } from "../../../common/icons";
 import { Urlize } from "../../../common/utils";
@@ -105,7 +106,7 @@ export const WorkItemPage: FC<WorkItemPageProps> = (props) => {
                             </div>
 
                             <div className="reverse-gradient-bg absolute bottom-0 left-0 w-full pt-7 pb-3 px-5">
-                                <span className="text-4xl font-secondary tracking-wide">
+                                <span className="text-3xl lg:text-4xl font-secondary tracking-wide">
                                     {props.post.title}
                                 </span>
                             </div>
@@ -116,8 +117,9 @@ export const WorkItemPage: FC<WorkItemPageProps> = (props) => {
                         </div>
                         <div className="mt-1 pb-10 pt-10 px-10 lg:px-16">
                             <ReactMarkdown
-                                rehypePlugins={[rehypeRaw]}
-                                className="text-justify">
+                                rehypePlugins={[rehypeRaw]} 
+                                remarkPlugins={[remarkGfm]}
+                                className="text-justify prose">
                                 {props.post.content}
                             </ReactMarkdown>
                             <hr className="mt-5" />

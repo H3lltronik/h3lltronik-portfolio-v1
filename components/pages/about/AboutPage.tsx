@@ -5,6 +5,7 @@ import rehypeRaw from "rehype-raw";
 import { scrollToElement } from "../../../common/utils";
 import { IMAGES_SERVER_URL } from "../../../constants";
 import { Button } from "../../common/Button";
+import remarkGfm from 'remark-gfm'
 
 type AboutPageProps = {
     content: AboutPageData.RootObject;
@@ -38,7 +39,7 @@ export const AboutPage: FC<AboutPageProps> = (props) => {
                     </div>
                 </div>
                 <div className="mx-auto w-full lg:w-8/12 px-10 flex flex-col">
-                    <ReactMarkdown rehypePlugins={[rehypeRaw]} className="text-justify">
+                    <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} className="text-justify prose mx-auto">
                         {props.content.content}
                     </ReactMarkdown>
 
@@ -65,7 +66,7 @@ export const AboutPage: FC<AboutPageProps> = (props) => {
                                 return (
                                     <div id={`timeline-${item.id}`} className="observable mx-auto w-full px-10 lg:pl-24" key={index}
                                     style={{scrollMarginTop: '100px'}}>
-                                        <ReactMarkdown rehypePlugins={[rehypeRaw]} className="text-justify">
+                                        <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} className="text-justify prose mx-auto">
                                             {item.content}
                                         </ReactMarkdown>
                                     </div>
@@ -111,10 +112,10 @@ const Timeline:FC<TimelineProps> = (props ) => {
     }, [])
 
     return (
-        <div className="w-full lg:w-[350px] mb-5 lg:mb-0 px-10 lg:px-0 sticky top-0 left-0 gradient-bg pt-2">
+        <div className="w-full lg:w-[350px] mb-5 lg:mb-0 px-10 lg:px-0 sticky top-0 left-0 gradient-bg pt-2 z-50">
             <div className="w-full h-[75px] lg:h-[350px] max-h-screen sticky top-5 left-0 flex
             lg:flex-col lg:items-center justify-between
-            flex-row  lg:overflow-visible items-start
+            flex-row lg:overflow-visible items-start
             ">
                 
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-full h-[2px] lg:h-full lg:w-[2px] bg-secondary
@@ -127,8 +128,8 @@ const Timeline:FC<TimelineProps> = (props ) => {
                             <button className="flex relative group text-left" key={index} 
                                 onClick={() => {scrollToElement(`#timeline-${item.id}`)}}>
                                 <div className={`w-[30px] h-[30px] rounded-full border-2 border-secondary bg-primary
-                                group-hover:bg-secondary transition duration-300
-                                ${observing == `timeline-${item.id}` && 'bg-secondary'}`}>
+                                    group-hover:bg-secondary transition duration-300
+                                    ${observing == `timeline-${item.id}` && 'bg-secondary'}`}>
                                 </div>
 
                                 <div className={`absolute w-[50px] lg:w-[80px] mt-10 lg:mt-0 text-xs lg:text-sm

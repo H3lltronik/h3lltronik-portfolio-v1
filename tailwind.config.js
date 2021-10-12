@@ -57,11 +57,53 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 100s linear infinite',
         'hard-pulse': 'hard-pulse 1s ease-in-out infinite',
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            'font-family': theme('fontFamily.secondary'),
+            color: theme('colors.secondary'),
+            h1: {
+              color: theme('colors.secondary'),
+            },
+            h2: {
+              color: theme('colors.secondary'),
+            },
+            h3: {
+              color: theme('colors.secondary'),
+            },
+            h4: {
+              color: theme('colors.secondary'),
+            },
+            strong: {
+              color: theme('colors.secondary'),
+            },
+            blockquote: {
+              color: theme('colors.secondary'),
+            },
+            th: {
+              color: theme('colors.light'),
+            },
+            code: {
+              color: theme('colors.secondary'),
+              background: '#1f2937',
+              'border-radius': '5px',
+            },
+            a: {
+              color: theme('colors.purple.500'),
+              '&:hover': {
+                color: theme('colors.red.500'),
+              },
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }

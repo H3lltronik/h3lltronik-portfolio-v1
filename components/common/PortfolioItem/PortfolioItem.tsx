@@ -49,7 +49,7 @@ export const PortfolioItem: FC<PortfolioItemProps> = (props) => {
     }
 
     return (
-        <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}
+        <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave} onMouseDown={handleOnMouseEnter}
             className={`portfolio-item border-4 border-secondary ${props.className}
             max-w-[400px] xxl:max-w-[450px] md:w-[350px] md:h-[350px] xl:w-[400px] xl:h-[400px] xxl:w-[450px] xxl:h-[450px]`}>
             <div className="portfolio-item_id flex-center flex-col border-b-4 border-r-4 relative border-secondary">

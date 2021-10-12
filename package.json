@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "dotenv": "^10.0.0",
     "framer-motion": "^4.1.17",
     "next": "11.1.2",
@@ -22,6 +23,7 @@
     "react-markdown": "^7.0.1",
     "react-tag-autocomplete": "^6.3.0",
     "rehype-raw": "^6.1.0",
+    "remark-gfm": "^3.0.0",
     "sass": "^1.42.1",
     "slugify": "^1.6.1",
     "swiper": "^7.0.8",
