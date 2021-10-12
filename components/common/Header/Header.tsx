@@ -39,7 +39,7 @@ export const Header: FC<HeaderProps> = (props) => {
     useEffect(() => {
         if (!headerRef.current) return;
         initStickyCheck(headerRef.current, checkSticky);
-        let timeToFade = 4500;
+        let timeToFade = 7000;
         const skipInitialSequence = sessionStorage.getItem(SKIP_INITIAL_SEQUENCE);
         if (skipInitialSequence) timeToFade = 500;
 
