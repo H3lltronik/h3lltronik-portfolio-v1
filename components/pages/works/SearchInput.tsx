@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FC, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { personIcon } from '../../../common/icons';
+import { personIcon, searchIcon } from '../../../common/icons';
 import { Button } from '../../common/Button';
 import { Input } from '../../common/Form/Input';
 
@@ -46,7 +46,7 @@ export const SearchInput:FC<SearchInputProps> = (props) => {
             <div className="text-secondary font-primary text-2xl">Search</div>
 
             <div className="relative">
-                <Input rules={{required: false}} name="searchParam" control={control} icon={personIcon} placeholder="Search..."
+                <Input rules={{required: false}} name="searchParam" control={control} icon={searchIcon} placeholder="Search..."
                 className="" onKeyDown={handleSubmit} onChange={handleOnChange}
                 containerClassName={`rounded-3xl bg-secondary text-primary`} value={value}
                 inputClassName={`placeholder-primary text-primary placeholder-primary`}/>

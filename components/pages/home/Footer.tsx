@@ -16,7 +16,7 @@ export const Footer: FC<FooterProps> = (props) => {
                 className={`container mx-auto flex flex-col lg:flex-row justify-between items-center lg:h-[80px] relative gap-10 lg:gap-0
                     py-10 ${props.className}`}>
                 <p className="order-3 lg:order-1 text-secondary text-sm font-light">
-                    <i>No cows were harmed in this website</i>
+                    <i>No cows were harmed in the making of this website</i>
                 </p>
 
                 <button

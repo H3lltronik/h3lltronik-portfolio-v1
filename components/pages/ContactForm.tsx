@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { personIcon } from "../../common/icons";
+import { chatIcon, envelopeIcon, personIcon } from "../../common/icons";
 import { useStore } from "../../common/store";
 import { Button } from "../common/Button";
 import { Input } from "../common/Form/Input";
@@ -56,10 +56,10 @@ export const ContactForm = () => {
                 <Input rules={{ required: true }} control={control} name="fullName" icon={personIcon} inputClassName={`text-secondary placeholder-light`}
                 iconClassName={`text-secondary`} containerClassName={`py-2`}
                 label="*Your Name" placeholder="Enter your full name" className="mt-10 z-[1]"/>
-                <Input rules={{ required: true, pattern: /^\S+@\S+$/i }} control={control} name="email" icon={personIcon} inputClassName={`text-secondary placeholder-light`}
+                <Input rules={{ required: true, pattern: /^\S+@\S+$/i }} control={control} name="email" icon={envelopeIcon} inputClassName={`text-secondary placeholder-light`}
                 iconClassName={`text-secondary`} containerClassName={`py-2`}
                 label="*Your Email" placeholder="Enter your email" className="mt-16 z-[1]"/>
-                <Input rules={{ required: true }} control={control} name="message" icon={personIcon} inputClassName={`text-secondary placeholder-light`}
+                <Input rules={{ required: true }} control={control} name="message" icon={chatIcon} inputClassName={`text-secondary placeholder-light`}
                 iconClassName={`text-secondary`} containerClassName={`py-2`}
                 label="*Your Message" placeholder="Enter your message" className="mt-16 z-[1]"/>
 
