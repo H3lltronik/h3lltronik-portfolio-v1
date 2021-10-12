@@ -283,7 +283,7 @@ declare module Blogs {
     }
 
     export interface Tag {
-        id: number;
+        id: number|string;
         title: string;
         published_at?: Date;
         created_at?: Date;

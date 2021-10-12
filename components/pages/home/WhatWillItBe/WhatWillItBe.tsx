@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Pace, WindupChildren } from "windups";
 import { textBlock } from "./anim";
+import Image from 'next/image';
 
 export const WhatWillItBe = () => {
     const controls = useAnimation();
@@ -67,7 +68,7 @@ const Roulette = () => {
             className="w-[200px] h-[300px] sm:h-[400px] overflow-hidden relative">
             <div className="absolute left-0 top-1/2 transform -translate-y-1/2 h-[600px] w-[600px]">
                 <div className="animate-spin-slow">
-                    <img src="/logos.png" alt="" />
+                    <Image src={"/logos.png"} width={600} height={600}/>
                 </div>
 
                 <div className=""></div>

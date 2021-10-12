@@ -67,7 +67,10 @@ export const useStore = create<StoreState>((set, get) => ({
         );
         const tagsFilter = [...searchFilter];
         let res = tagsFilter.filter(post => {
-            return post.tags.some(pTag => filterTags.some(fTag => fTag.id === pTag.id));
+            return post.tags.some(pTag => filterTags.some(fTag => {
+                // console.log("searching for", pTag.id, " but current ", fTag)
+                return fTag.id === pTag.id
+            }));
         })
 
         if (filterTags.length <= 0)

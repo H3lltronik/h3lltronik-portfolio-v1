@@ -32,7 +32,7 @@ export const TagsFilter = () => {
     }
 
     useEffect(() => {
-        setFiltersTags(selectedTags.map((t) => ({ id: Number(t.id), title: t.name })));
+        setFiltersTags(selectedTags.map((t) => ({ id: t.id, title: t.name })));
     }, [selectedTags]);
 
     return (
