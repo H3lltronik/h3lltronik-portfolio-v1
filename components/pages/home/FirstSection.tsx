@@ -22,17 +22,17 @@ export const FirstSection: FC<FirstSectionProps>= (props) => {
             setH3lltronik(true);
             if (props.onFinishedAnims) props.onFinishedAnims()
         }else {
-            setTimeout(() => setFirstBlink(true), 840);
+            setTimeout(() => setFirstBlink(true), 140);
             setTimeout(() => setSecondBlink(true), 2000);
             setTimeout(() => {
                 setFirstBlink(false);
                 setSecondBlink(false);
-            }, 3500);
+            }, 4500);
             setTimeout(() => {
                 setH3lltronik(true);
                 if (props.onFinishedAnims) props.onFinishedAnims()
                 sessionStorage.setItem(SKIP_INITIAL_SEQUENCE, "1");
-            }, 3600);
+            }, 4600);
         }
     }
 
@@ -45,7 +45,7 @@ export const FirstSection: FC<FirstSectionProps>= (props) => {
                     <p className="text-2xl lg:text-5xl ">
                         <span className="">H:\&gt;</span>
                         <WindupChildren>
-                            <Pace getPace={() => 60}>
+                            <Pace getPace={() => 40}>
                                 <span className="text-console-highlight">
                                     {" man "}
                                 </span>
