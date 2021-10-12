@@ -46,7 +46,7 @@ const Home: NextPage<HomePageProps> = (props) => {
       </Head>
 
       <FirstSection onFinishedAnims={onFirstSectionFinish}/>
-      <Header className="sticky" enableAnim={true} enableFadeIn={true}/>
+      <Header className="sticky" enableAnim={false} enableFadeIn={true}/>
       <WorkLove />
       <WhatWillItBe />
       

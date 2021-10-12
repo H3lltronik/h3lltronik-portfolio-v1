@@ -53,8 +53,9 @@ export const Header: FC<HeaderProps> = (props) => {
     }, [headerRef, enableFadeIn, headerContAnim]);
 
     useEffect(() => {
+        if (!enableAnim) return
         initScrollAnim(shrink, expand);
-    }, [isSticky]);
+    }, [isSticky, enableAnim]);
 
     useEffect(() => {
         setEnableAnim(!!props.enableAnim)
@@ -64,12 +65,14 @@ export const Header: FC<HeaderProps> = (props) => {
     }, [])
 
     useEffect(() => {
-        if (windowsSize.width <= 768 && enableAnim) {
+        if (!enableAnim) return;
+
+        if (windowsSize.width <= 768) {
             setEnableAnim(false);
-        } else if (windowsSize.width > 768 && !enableAnim) {
+        } else if (windowsSize.width > 768) {
             setEnableAnim(true);
         }
-    }, [windowsSize])
+    }, [windowsSize, enableAnim])
 
     function checkSticky(entries: any) {
         const [entry] = entries;
