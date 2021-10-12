@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Bold.eot');
+    src: local('Inter Bold'), local('Inter-Bold'),
+        url('Inter-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Bold.woff2') format('woff2'),
+        url('Inter-Bold.woff') format('woff'),
+        url('Inter-Bold.ttf') format('truetype'),
+        url('Inter-Bold.svg#Inter-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Medium.eot');
+    src: local('Inter Medium'), local('Inter-Medium'),
+        url('Inter-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Medium.woff2') format('woff2'),
+        url('Inter-Medium.woff') format('woff'),
+        url('Inter-Medium.ttf') format('truetype'),
+        url('Inter-Medium.svg#Inter-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Regular.eot');
+    src: local('Inter Regular'), local('Inter-Regular'),
+        url('Inter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Regular.woff2') format('woff2'),
+        url('Inter-Regular.woff') format('woff'),
+        url('Inter-Regular.ttf') format('truetype'),
+        url('Inter-Regular.svg#Inter-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-ThinBETA.eot');
+    src: local('Inter Thin BETA'), local('Inter-ThinBETA'),
+        url('Inter-ThinBETA.eot?#iefix') format('embedded-opentype'),
+        url('Inter-ThinBETA.woff2') format('woff2'),
+        url('Inter-ThinBETA.woff') format('woff'),
+        url('Inter-ThinBETA.ttf') format('truetype'),
+        url('Inter-ThinBETA.svg#Inter-ThinBETA') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Decker';
+    src: url('Decker.eot');
+    src: local('Decker'),
+        url('Decker.eot?#iefix') format('embedded-opentype'),
+        url('Decker.woff2') format('woff2'),
+        url('Decker.woff') format('woff'),
+        url('Decker.ttf') format('truetype'),
+        url('Decker.svg#Decker') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('Inconsolata.eot');
+    src: local('Inconsolata'),
+        url('Inconsolata.eot?#iefix') format('embedded-opentype'),
+        url('Inconsolata.woff2') format('woff2'),
+        url('Inconsolata.woff') format('woff'),
+        url('Inconsolata.ttf') format('truetype'),
+        url('Inconsolata.svg#Inconsolata') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,7 @@
+{
+    "extends": "next/core-web-vitals",
+    "overrides": [{ "files": ["*.ts"], "rules": { "no-undef": "off" } }],
+    "rules": {
+        "@next/next/no-document-import-in-page": "off"
+    }
+}

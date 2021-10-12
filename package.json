@@ -1,0 +1,42 @@
+{
+  "name": "h3lltronik_portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "framer-motion": "^4.1.17",
+    "next": "11.1.2",
+    "nodemailer": "^6.7.0",
+    "postcss-import": "^14.0.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-fast-marquee": "^1.2.1",
+    "react-hook-form": "^7.17.1",
+    "react-intersection-observer": "^8.32.1",
+    "react-markdown": "^7.0.1",
+    "react-tag-autocomplete": "^6.3.0",
+    "rehype-raw": "^6.1.0",
+    "sass": "^1.42.1",
+    "slugify": "^1.6.1",
+    "swiper": "^7.0.8",
+    "windups": "^1.1.9",
+    "zustand": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.4",
+    "@types/react": "17.0.27",
+    "@types/react-tag-autocomplete": "^6.1.1",
+    "autoprefixer": "^10.3.6",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.16",
+    "typescript": "4.4.3"
+  }
+}

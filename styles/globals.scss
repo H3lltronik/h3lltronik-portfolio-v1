@@ -1,0 +1,194 @@
+/* ./styles/globals.css */
+@import "./fonts/fonts";
+
+@tailwind base;
+@tailwind components;
+
+.portfolio-item {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    &_id {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    &_title {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    &_tags {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    &_description {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    &_preview {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 4;
+        grid-row-end: 9;
+    }
+}
+
+@tailwind utilities;
+
+.flex-center {
+    @apply flex items-center justify-center;
+}
+
+#roulette::before {
+    content: "";
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    transform: translateY(-1px);
+    background: linear-gradient(
+        to bottom,
+        theme("colors.primary"),
+        transparent
+    );
+}
+#roulette::after {
+    content: "";
+    width: 100%;
+    z-index: 10;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    transform: translateY(1px);
+    background: linear-gradient(to top, theme("colors.primary"), transparent);
+}
+
+.gradient-bg {
+    background: linear-gradient(
+        to bottom,
+        theme("colors.primary") 80%,
+        transparent
+    );
+}
+
+.reverse-gradient-bg {
+    background: linear-gradient(
+        to top,
+        theme("colors.primary") 80%,
+        transparent
+    );
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: theme("colors.primary");
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: theme("colors.light");
+    border-radius: 10px;
+}
+
+.content-container {
+    max-width: 1320px !important;
+}
+
+.projects_pagination {
+    .swiper-pagination-bullet,
+    .swiper-pagination-bullet-active {
+        display: block;
+        width: 30px;
+        height: 10px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid theme("colors.secondary");
+        transition: background 0.3s ease;
+    }
+
+    .swiper-pagination-bullet {
+        background: theme("colors.primary");
+    }
+    .swiper-pagination-bullet-active {
+        background: theme("colors.secondary");
+    }
+}
+
+.contact-screen {
+    min-height: 900px;
+    max-height: 1000px;
+}
+
+.latest-projects-screen {
+    // min-height: 99vh;
+    // max-height: 1000px;
+}
+
+.what-will-it-be-screen {
+    min-height: 850px;
+    max-height: 1000px;
+}
+
+.work-love-screen {
+    min-height: 850px;
+    max-height: 1000px;
+}
+
+.first-screen {
+    height: calc(100vh - 80px);
+}
+
+.cow-pre {
+    line-height: 1rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .cow-pre {
+        line-height: 1rem !important;
+    }
+
+    .contact-screen {
+        min-height: 850px;
+        max-height: unset;
+    }
+    
+    .latest-projects-screen {
+        min-height: 500px;
+        max-height: 700px;
+    }
+    
+    .what-will-it-be-screen {
+        min-height: unset;
+        max-height: 700px;
+    }
+    
+    .work-love-screen {
+        min-height: 450px;
+        max-height: 700px;
+    }
+    
+    .first-screen {
+        min-height: 600px;
+    }
+}
+
+.relative-i {
+    position: relative !important;
+}
+
+.search-tags-active {
+    
+}
