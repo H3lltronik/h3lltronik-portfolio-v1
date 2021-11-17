@@ -1,3 +1,5 @@
+import slugify from "slugify";
+
 export const scrollToPx = (px: number) => {
     window.scrollTo({
         top: px,
@@ -13,4 +15,8 @@ export const scrollToElement = (query: string) => {
 
 export const Urlize = (value: string) => {
     return encodeURIComponent(value.toLocaleLowerCase());
+}
+
+export const portfolioItemUrl = (id: string|number, title: string) => {
+    return `/works/${id}/${slugify(title.toLocaleLowerCase())}`;
 }

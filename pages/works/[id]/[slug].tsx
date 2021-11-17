@@ -2,6 +2,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import React from "react";
 import slugify from "slugify";
+import { portfolioItemUrl } from "../../../common/utils";
 import { Header } from "../../../components/common/Header/Header";
 import { Footer } from "../../../components/pages/home/Footer";
 import { WorkItemPage } from "../../../components/pages/works/WorkItemPage";
@@ -31,7 +32,7 @@ const WorkEntry: NextPage<WorkEntryProps> = (props) => {
                 <meta property="og:site_name" content="H3lltronik Developer | Personal Portfolio" />
                 <meta property="og:description" content={props.post.short_description} />
                 <meta property="og:image" content={props.post.thumbnail.url} />
-                <meta property="og:url" content={`${SEO_SITE_URL_BASE}/works/${props.post.id}/${slugify(props.post.title.toLocaleLowerCase())}`} />
+                <meta property="og:url" content={`${SEO_SITE_URL_BASE}${portfolioItemUrl(props.post.id, props.post.title)}`} />
                 <meta property="og:type" content="article" />
                 <meta property="og:locale" content="en_US" />
             </Head>

@@ -5,6 +5,7 @@ import React, { FC, useEffect } from 'react';
 import Marquee from 'react-fast-marquee';
 import slugify from 'slugify';
 import { computerIcon, githubIcon } from '../../../common/icons';
+import { portfolioItemUrl } from "../../../common/utils";
 import { IMAGES_SERVER_URL } from '../../../constants';
 import { Button } from '../Button';
 import { previewVariants, projectDescVariants, projectIdVariants, projectTitleVariants } from './anim';
@@ -102,7 +103,7 @@ export const PortfolioItem: FC<PortfolioItemProps> = (props) => {
                             {props.data.repository && <LinkButton link={props.data.repository} title="Repo" icon={githubIcon}/>}
                         </div>
 
-                        <Link href={`/works/${props.data.id}/${slugify(props.data.title.toLocaleLowerCase())}`} passHref={true}>
+                        <Link href={portfolioItemUrl(props.data.id, props.data.title)} passHref={true}>
                             <div className="">
                                 <Button>See entry</Button>
                             </div>
