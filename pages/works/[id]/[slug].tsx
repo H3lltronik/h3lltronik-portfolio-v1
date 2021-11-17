@@ -5,7 +5,7 @@ import slugify from "slugify";
 import { Header } from "../../../components/common/Header/Header";
 import { Footer } from "../../../components/pages/home/Footer";
 import { WorkItemPage } from "../../../components/pages/works/WorkItemPage";
-import { SERVER_URL } from "../../../constants";
+import { SEO_SITE_URL_BASE, SERVER_URL } from "../../../constants";
 
 type WorkEntryProps = {
     post: Blogs.RootObject;
@@ -19,14 +19,23 @@ const WorkEntry: NextPage<WorkEntryProps> = (props) => {
         <div id="top" className={`relative`}>
             <Head>
                 <title>Works | H3lltronik Developer</title>
+
+                <meta property="description" content={props.post.short_description} />
+                <meta property="og:title" content={props.post.short_title} />
+                <meta property="og:site_name" content="H3lltronik Developer | Personal Portfolio" />
+                <meta property="og:description" content={props.post.short_description} />
+                <meta property="og:image" content={props.post.thumbnail.url} />
+                <meta property="og:url" content={`${SEO_SITE_URL_BASE}/works/${props.post.id}/${slugify(props.post.title.toLocaleLowerCase())}`} />
+                <meta property="og:type" content="article" />
+                <meta property="og:locale" content="en_US" />
             </Head>
 
             <Header className="" />
 
             <WorkItemPage
-            post={props.post}
-            presentation={props.presentation}
-            posts={props.posts}
+                post={props.post}
+                presentation={props.presentation}
+                posts={props.posts}
             />
 
             <Footer className="" />

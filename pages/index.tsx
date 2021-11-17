@@ -9,7 +9,7 @@ import { Footer } from "../components/pages/home/Footer";
 import { LatestProjects } from "../components/pages/home/LatestProjects/LatestProjects";
 import { WhatWillItBe } from "../components/pages/home/WhatWillItBe/WhatWillItBe";
 import { WorkLove } from "../components/pages/home/WorkLove/WorkLove";
-import { SERVER_URL } from "../constants";
+import { SEO_SITE_URL_BASE, SERVER_URL } from "../constants";
 
 
 type HomePageProps = {
@@ -46,9 +46,9 @@ const Home: NextPage<HomePageProps> = (props) => {
 
         <meta property="og:title" content="H3lltronik Developer | Personal Portfolio"/>
         <meta property="og:site_name" content="H3lltronik Developer | Personal Portfolio"/>
-        <meta property="og:description" content="I am H3lltronik, software engineer and frontend developer and this is my personal portfolio"/>
+        <meta property="og:description" content="I am H3lltronik, software engineer and frontend developer and this is my personal portfolio. I am a freelance coder with a lot of experience on frontend web development and React based application but I am also a FullStack developer, I can help you to build your next successful system."/>
         <meta property="og:image" content="/screenshot.png"/>
-        <meta property="og:url" content="h3lltronik-portfolio-v1.vercel.app"/>
+        <meta property="og:url" content={SEO_SITE_URL_BASE}/>
         <meta property="og:type" content="website"/>
         <meta property="og:locale" content="en_US"/>
       </Head>
