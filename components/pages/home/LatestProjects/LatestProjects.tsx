@@ -36,7 +36,7 @@ export const LatestProjects:FC<LatestProjectsProps> = (props) => {
                 {inView && (
                     <WindupChildren>
                         <Pace getPace={() => 80}>
-                            <div className="text-4xl md:text-4xl xl:text-headline-1 xxl:text-title-2 tracking-wider text-light">
+                            <div className="text-4xl md:text-4xl xl:text-headline-1 xxl:text-title-3 tracking-wider text-light">
                                 {"Latest"}
                             </div>
                         </Pace>

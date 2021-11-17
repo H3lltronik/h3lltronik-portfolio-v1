@@ -74,7 +74,7 @@ export const FirstSection: FC<FirstSectionProps>= (props) => {
                                     <div className="text-2xl lg:text-5xl text-center mt-5 mx-auto">
                                         <div className="">I am H3lltronik</div>
                                         <div className="">
-                                            <span>Sofware Engineer</span>
+                                            <span>Software Engineer</span>
                                             <span className="animate-hard-pulse">_</span>
                                         </div>
                                     </div>

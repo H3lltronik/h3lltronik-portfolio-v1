@@ -43,6 +43,14 @@ const Home: NextPage<HomePageProps> = (props) => {
     <div id="top" className={`relative ${!firstSection && 'overflow-hidden h-screen'}`}>
       <Head>
         <title>H3lltronik Developer</title>
+
+        <meta property="og:title" content="H3lltronik Developer | Personal Portfolio"/>
+        <meta property="og:site_name" content="H3lltronik Developer | Personal Portfolio"/>
+        <meta property="og:description" content="I am H3lltronik, software engineer and frontend developer and this is my personal portfolio"/>
+        <meta property="og:image" content="/screenshot.png"/>
+        <meta property="og:url" content="h3lltronik-portfolio-v1.vercel.app"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:locale" content="en_US"/>
       </Head>
 
       <FirstSection onFinishedAnims={onFirstSectionFinish}/>

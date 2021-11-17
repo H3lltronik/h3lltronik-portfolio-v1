@@ -14,7 +14,7 @@ export const Carousel:FC<CarouselProps> = (props) => {
     return (
         <>
             <motion.div animate={{opacity: 1}} initial={{opacity: 0}} transition={{duration: 1.5}}
-            className="flex flex-col justify-between w-full mt-10 md:mt-10 xl:mt-32 xxl:mt-44 relative px-8 lg:px-0">
+            className="flex flex-col justify-between w-full mt-10 md:mt-10 xl:mt-32 xxl:mt-40 relative px-8 lg:px-0">
                 <Swiper
                     modules={[Navigation, Pagination]}
                     slidesPerView={3}
