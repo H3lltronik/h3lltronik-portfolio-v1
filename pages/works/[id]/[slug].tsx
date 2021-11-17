@@ -15,6 +15,12 @@ type WorkEntryProps = {
 
 const WorkEntry: NextPage<WorkEntryProps> = (props) => {
 
+    if (!props.post) {
+        return (
+            <div className="">Loading...</div>
+        )
+    }
+
     return (
         <div id="top" className={`relative`}>
             <Head>
