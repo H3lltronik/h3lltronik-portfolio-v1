@@ -18,6 +18,8 @@ const Home: NextPage<AboutPageProps> = (props) => {
             <Head>
                 <title>About Me | H3lltronik Developer</title>
 
+                <meta name="description" content="My name is Esau Gonzalez but on the wide world of the internet I present myself as 'H3lltronik' since that is the nickname I use in videogames and other websites. I am a software engineer and a frontend developer."/>
+
                 <meta property="og:title" content="About Me | H3lltronik Developer" />
                 <meta property="og:site_name" content="H3lltronik Developer | Personal Portfolio" />
                 <meta property="og:description" content="My name is Esau Gonzalez but on the wide world of the internet I present myself as 'H3lltronik' since that is the nickname I use in videogames and other websites. I am a software engineer and a frontend developer." />

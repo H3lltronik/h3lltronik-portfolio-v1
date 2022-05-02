@@ -25,7 +25,7 @@ const WorkEntry: NextPage<WorkEntryProps> = (props) => {
     return (
         <div id="top" className={`relative`}>
             <Head>
-                <title>Works | H3lltronik Developer</title>
+                <title>Works | {props.post.short_title}</title>
 
                 <meta property="description" content={props.post.short_description} />
                 <meta property="og:title" content={props.post.short_title} />

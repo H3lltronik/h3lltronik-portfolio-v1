@@ -44,6 +44,9 @@ const Home: NextPage<HomePageProps> = (props) => {
       <Head>
         <title>H3lltronik Developer</title>
 
+        <meta name="description" content="I am H3lltronik, software engineer and frontend developer and this is my personal portfolio. I am a freelance coder with a lot of experience on frontend web development and React based application but I am also a FullStack developer, I can help you to build your next successful system."/>
+        <meta name="google-site-verification" content="7J4wpm5t_enh7DvKal_97o19jiQNLGKToNwKe58DtxE" />
+
         <meta property="og:title" content="H3lltronik Developer | Personal Portfolio"/>
         <meta property="og:site_name" content="H3lltronik Developer | Personal Portfolio"/>
         <meta property="og:description" content="I am H3lltronik, software engineer and frontend developer and this is my personal portfolio. I am a freelance coder with a lot of experience on frontend web development and React based application but I am also a FullStack developer, I can help you to build your next successful system."/>
