@@ -24,6 +24,7 @@ export const AboutPage: FC<AboutPageProps> = (props) => {
                             alt="about me image"
                             width={400}
                             height={800}
+                            className="object-contain"
                             src={IMAGES_SERVER_URL + props.content.desktop_image.url}
                         />
                     </div>
